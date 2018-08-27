@@ -1,0 +1,132 @@
+ /* Split the screen in half */
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #f4f4f4;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #f4f4f4;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+} 
+
+/*avois resizable texarea*/
+textarea {
+  resize: none;
+  width: 600px;
+  height: 100px;
+}
+
+h2{
+  margin-top: 9px;
+}
+/*By default hide the tokens show, it is shown by js*/
+#showTokens{
+  display: none;
+}
+
+.copyBtn{
+  margin: 4px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  
+}
+
+/*Media query for mobile phones*/
+@media screen and (max-width:1150px) {
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 100px;
+    border-radius: 50%;
+  } 
+
+  /*avois resizable texarea*/
+  textarea {
+    resize: none;
+    width: 300px;
+    height: 50px;
+  }
+
+}
+
+/*Media query for mobile phones*/
+@media screen and (max-width:700px) {
+  .split {
+    height: 50%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  /* Control the left side */
+  .left {
+    top: 0;
+    background-color: #f4f4f4;
+  }
+
+  /* Control the right side */
+  .right {
+    top: 50%;
+    background-color: #f4f4f4;
+  }
+
+  .centered img {
+    width: 80px;
+    border-radius: 50%;
+  } 
+
+  /*avoid resizable texarea*/
+  textarea {
+    resize: none;
+    width: 300px;
+    height: 50px;
+  }
+
+
+
+}
